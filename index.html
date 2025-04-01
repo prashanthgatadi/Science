@@ -6,6 +6,7 @@
     <title>Web to Lead Form</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <h1>Create Lead</h1>
@@ -21,7 +22,11 @@
         value="https://prashanthgatadi.github.io/Science/thanks.html"
       />
       <input type="hidden" name="Lead_Date__c" class="outputdate" />
-
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"webtolead","fallback":"true","orgId":"00DNS000001vzX2","ts":""}'
+      />
       <label for="first_name">First Name</label
       ><input
         id="first_name"
@@ -107,6 +112,12 @@
           size="12"
           type="text" /></span
       ><br /> -->
+
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LcaSQYrAAAAAEchQw9B0O9P6blnABbmZ0_4rd6n"
+      ></div>
+      <br /><br />
 
       <input type="submit" name="submit" class="submit" />
     </form>
